@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 | COMMAND CENTER</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-[#020202] text-[#00f3ff] selection:bg-cyan-500/30">
+
+    <nav class="h-16 border-b border-cyan-900/40 flex items-center justify-between px-8 sticky top-0 bg-black/60 backdrop-blur-xl z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-2 h-2 bg-cyan-500 rounded-full shadow-[0_0_10px_#00f3ff] animate-pulse"></div>
+            <span class="font-black tracking-[0.2em] text-lg">PROJECT A1</span>
+        </div>
+        <div class="flex gap-8 font-mono text-[10px] tracking-widest text-cyan-700">
+            <span>IDENTITY: <b class="text-cyan-400">COMMANDER</b></span>
+            <span>STATUS: <b class="text-green-500">SYSTEM STABLE</b></span>
+            <span>UPTIME: <b id="uptime">00:00:00</b></span>
+        </div>
+    </nav>
+
+    <main class="p-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <div class="hud-card"><span>Cloud Connectivity</span><canvas id="cloudConn"></canvas></div>
+        <div class="hud-card"><span>Engine Connectivity</span><canvas id="engineConn"></canvas></div>
+        <div class="hud-card"><span>Hosting Health</span><canvas id="hostConn"></canvas></div>
+        <div class="hud-card"><span>Domain Status</span><canvas id="domainConn"></canvas></div>
+        <div class="hud-card"><span>Host-Domain Bridge</span><canvas id="bridgeSync"></canvas></div>
+        
+        <div class="hud-card"><span>Multi-Cloud Mesh</span><canvas id="multiCloud"></canvas></div>
+        <div class="hud-card"><span>Drive Matrix</span><canvas id="driveSync"></canvas></div>
+        <div class="hud-card"><span>Anomaly Detection</span><canvas id="problemGraph"></canvas></div>
+        <div class="hud-card"><span>Multi-Engine Sync</span><canvas id="engineMulti"></canvas></div>
+        <div class="hud-card"><span>AI Core Logic</span><canvas id="aiHealth"></canvas></div>
+        
+        <div class="hud-card"><span>Active Shadows (Users)</span><canvas id="userActive"></canvas></div>
+        <div class="hud-card"><span>Engine Performance</span><canvas id="engineRPM"></canvas></div>
+        <div class="hud-card"><span>Memory Capacity</span><canvas id="capacityGraph"></canvas></div>
+        <div class="hud-card"><span>Endurance Timeline</span><canvas id="enduranceGraph"></canvas></div>
+        <div class="hud-card"><span>System Stress</span><canvas id="sysStress"></canvas></div>
+
+    </main>
+
+    <script src="assets/js/monitor.js"></script>
+</body>
+                                                            </html>
+                                                            
