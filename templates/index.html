@@ -26,26 +26,32 @@
         <header class="page-header">
             <h2>Dashboard Overview</h2>
             <p>Real-time system performance and connectivity metrics.</p>
+       
+        <div class="header-bottom-row" style="border-top: 2px solid #1a1a1a; padding: 10px 20px; display: flex; align-items: center; gap: 15px;">
+    <button id="menuToggle" style="font-size: 24px; cursor: pointer;">⋮</button>
+    
+    <div style="background: #f0f2f8; padding: 5px 15px; border-radius: 8px; flex-grow: 1; max-width: 300px;">
+        <input type="text" placeholder="Search..." style="border: none; background: none; outline: none; width: 100%;">
+    </div>
+        </div>
+            
+        
+        
+        
+        
         </header>
 
 
 
+<div id="sidebarOverlay" class="sidebar-overlay"></div>
+<aside id="sidebar" class="sidebar">
+    <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+        <strong style="color: #2b3674;">A1 CONTROL PANEL</strong>
+        <button id="sidebarClose" style="font-size: 20px;">×</button>
+    </div>
+    <nav id="dynamicMenu" class="menu-list" style="padding: 15px;"></nav>
+</aside>
 
-        <div class="main-wrapper" style="display: flex;">
-    <aside class="sidebar" style="width: 280px; background: white; border-right: 1px solid #ddd; height: 100vh; position: fixed;">
-        <div class="sidebar-header" style="padding: 20px;">
-            <h2 style="color: #2b3674; font-weight: 800;">A1 CONTROL</h2>
-        </div>
-        <nav id="dynamicMenu" class="menu-list"></nav>
-    </aside>
-
-    <main class="content" style="margin-left: 280px; flex: 1; padding: 20px;">
-        </main>
-</div>
-
-<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
-        
-        
 
         
         <div class="dashboard-grid">
