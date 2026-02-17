@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Space+Grotesk:wght@300;500&display=swap');
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: radial-gradient(circle at 50% 50%, #0a1114 0%, #020202 100%);
+    min-height: 100vh;
+}
+
+.hud-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+    border-radius: 4px;
+    padding: 12px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hud-card span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 243, 255, 0.5);
+}
+
+.hud-card:hover {
+    background: rgba(0, 243, 255, 0.05);
+    border-color: #00f3ff;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
