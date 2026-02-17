@@ -3,45 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A1 COMMAND CENTER</title>
-    <link rel="stylesheet" href="static/css/dashboard.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>A1 COMMAND CENTER - LIGHT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-[#020202] text-[#00f3ff] overflow-x-hidden">
+<body>
 
-    <nav class="h-16 border-b border-cyan-900/40 flex items-center justify-between px-8 sticky top-0 bg-black/80 backdrop-blur-xl z-50">
-        <div class="flex items-center gap-3">
-            <div class="w-2 h-2 bg-cyan-500 rounded-full shadow-[0_0_10px_#00f3ff] animate-pulse"></div>
-            <span class="font-black tracking-[0.2em] text-lg">PROJECT A1</span>
+    <nav class="top-nav">
+        <div class="nav-logo">
+            <span class="logo-icon"></span>
+            <h1>A1 SUPER GENIUS</h1>
         </div>
-        <div class="flex gap-8 font-mono text-[10px] tracking-widest text-cyan-700 uppercase">
-            <span>Identity: <b class="text-cyan-400">Commander</b></span>
-            <span>Status: <b class="text-green-500">Sync Active</b></span>
-            <span>Uptime: <b id="uptime" class="text-white">00:00:00</b></span>
+        <div class="nav-status">
+            <span><i class="status-indicator online"></i> System Online</span>
+            <span><i class="user-icon"></i> Commander</span>
         </div>
     </nav>
 
-    <main class="p-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        <div class="hud-card"><span>Cloud Connectivity</span><canvas id="cloudConn"></canvas></div>
-        <div class="hud-card"><span>Engine Connectivity</span><canvas id="engineConn"></canvas></div>
-        <div class="hud-card"><span>Hosting Health</span><canvas id="hostConn"></canvas></div>
-        <div class="hud-card"><span>Domain Status</span><canvas id="domainConn"></canvas></div>
-        <div class="hud-card"><span>Host-Domain Bridge</span><canvas id="bridgeSync"></canvas></div>
+    <div class="container">
         
-        <div class="hud-card"><span>Multi-Cloud Mesh</span><canvas id="multiCloud"></canvas></div>
-        <div class="hud-card"><span>Drive Matrix</span><canvas id="driveSync"></canvas></div>
-        <div class="hud-card neon-border-red"><span>Anomaly Detection</span><canvas id="problemGraph"></canvas></div>
-        <div class="hud-card"><span>Multi-Engine Sync</span><canvas id="engineMulti"></canvas></div>
-        <div class="hud-card"><span>AI Core Health</span><canvas id="aiHealth"></canvas></div>
-        
-        <div class="hud-card"><span>Active Users / Engine</span><canvas id="userActive"></canvas></div>
-        <div class="hud-card"><span>Engine Performance</span><canvas id="engineRPM"></canvas></div>
-        <div class="hud-card"><span>Capacity (VRAM)</span><canvas id="capacityGraph"></canvas></div>
-        <div class="hud-card"><span>Endurance Uptime</span><canvas id="enduranceGraph"></canvas></div>
-        <div class="hud-card"><span>Total System Stress</span><canvas id="sysStress"></canvas></div>
-    </main>
+        <header class="page-header">
+            <h2>Dashboard Overview</h2>
+            <p>Real-time system performance and connectivity metrics.</p>
+        </header>
 
-    <script src="static/js/monitor.js"></script>
+        <div class="dashboard-grid">
+
+            <div class="card graph-card">
+                <h3>Cloud Connectivity</h3>
+                <div class="chart-container"><canvas id="cloudConn"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Engine Connectivity</h3>
+                <div class="chart-container"><canvas id="engineConn"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Hosting Health</h3>
+                <div class="chart-container"><canvas id="hostConn"></canvas></div>
+            </div>
+
+            <div class="card graph-card">
+                <h3>Domain Status</h3>
+                <div class="chart-container"><canvas id="domainConn"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Host-Domain Bridge</h3>
+                <div class="chart-container"><canvas id="bridgeSync"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Multi-Cloud Mesh</h3>
+                <div class="chart-container"><canvas id="multiCloud"></canvas></div>
+            </div>
+
+            <div class="card graph-card">
+                <h3>Drive Matrix (Storage)</h3>
+                <div class="chart-container"><canvas id="driveSync"></canvas></div>
+            </div>
+            <div class="card graph-card alert-card">
+                <h3>Anomaly Detection</h3>
+                <div class="chart-container"><canvas id="problemGraph"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>AI Core Logic Health</h3>
+                <div class="chart-container"><canvas id="aiHealth"></canvas></div>
+            </div>
+            
+            <div class="card graph-card">
+                <h3>Multi-Engine Sync</h3>
+                <div class="chart-container"><canvas id="engineMulti"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Active Users</h3>
+                <div class="chart-container"><canvas id="userActive"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Engine Performance (RPM)</h3>
+                <div class="chart-container"><canvas id="engineRPM"></canvas></div>
+            </div>
+
+            <div class="card graph-card">
+                <h3>Memory Capacity</h3>
+                <div class="chart-container"><canvas id="capacityGraph"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Endurance Uptime</h3>
+                <div class="chart-container"><canvas id="enduranceGraph"></canvas></div>
+            </div>
+            <div class="card graph-card">
+                <h3>Total System Stress</h3>
+                <div class="chart-container"><canvas id="sysStress"></canvas></div>
+            </div>
+
+        </div> </div> <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
