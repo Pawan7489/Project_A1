@@ -31,19 +31,20 @@
 
 
 
-        <div class="main-wrapper">
-    <aside class="sidebar">
-        <div class="sidebar-header" style="padding:20px; border-bottom:1px solid #f4f7fe;">
-            <h2 style="font-size:1.1rem; font-weight:800; color:#2b3674;">A1 CONTROL PANEL</h2>
+        <div class="main-wrapper" style="display: flex;">
+    <aside class="sidebar" style="width: 280px; background: white; border-right: 1px solid #ddd; height: 100vh; position: fixed;">
+        <div class="sidebar-header" style="padding: 20px;">
+            <h2 style="color: #2b3674; font-weight: 800;">A1 CONTROL</h2>
         </div>
-        <nav class="menu-list" id="dynamicMenu"></nav>
+        <nav id="dynamicMenu" class="menu-list"></nav>
     </aside>
 
-    <main class="content" style="margin-left: 280px;">
+    <main class="content" style="margin-left: 280px; flex: 1; padding: 20px;">
         </main>
-        </div>
+</div>
 
-
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+        
         
 
         
