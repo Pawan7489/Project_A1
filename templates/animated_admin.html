@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Command Center</title>
-    
+    <title>Dynamic Command Center</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animated-style.css') }}">
 </head>
 <body>
@@ -15,31 +14,32 @@
             <h2>Command Center</h2>
             <ul>
                 <li><a href="/">Homepage</a></li>
-                <li><a href="/admin">Simple Admin</a></li>
-                <li><a href="/animated" class="active">Animated Dash</a></li>
+                <li><a href="/animated" class="active">Auto-Animated Dash</a></li>
                 <li><a href="/hitech-settings">Settings</a></li>
             </ul>
         </aside>
 
         <main class="content">
             
-            <div class="neon-dashboard">
+            <div class="neon-dashboard mode-chasing" id="techDashboard">
                 
                 <span class="animated-line line-top"></span>
                 <span class="animated-line line-right"></span>
                 <span class="animated-line line-bottom"></span>
                 <span class="animated-line line-left"></span>
 
+                <div class="cyber-scan-line"></div>
+
                 <div class="inner-content">
                     <header class="content-header">
                         <h1>Welcome, Commander!</h1>
-                        <p>Advanced Neon Animation System is Online and Tracking.</p>
+                        <p>Dynamic AI Core Active. Animations shifting automatically.</p>
                     </header>
                     
                     <section class="dashboard-cards">
                         <div class="card">Total Users: 150</div>
                         <div class="card">Active Missions: 5</div>
-                        <div class="card">System: Online</div>
+                        <div class="card">System: Adaptive</div>
                     </section>
                 </div>
 
@@ -49,5 +49,6 @@
 
     </div>
 
+    <script src="{{ url_for('static', filename='js/animated-script.js') }}"></script>
 </body>
 </html>
