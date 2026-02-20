@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Tech Command Center - Commander</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hitech-style.css') }}">
+</head>
+<body>
+
+    <div class="hitech-grid-bg"></div>
+
+    <div class="admin-container">
+        
+        <aside class="sidebar slide-in-left">
+            <h2>SYS.COMMAND</h2>
+            <ul>
+                <li><a href="/">Base Terminal</a></li>
+                <li><a href="/animated">System Dashboard</a></li>
+                <li><a href="/hitech-settings" class="active">Core Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header class="content-header fade-in-down">
+                <h1>COMMANDER CORE IDENTITY</h1>
+                <p>System Status: <span class="status-online">ONLINE & SECURE</span></p>
+                <div class="header-line"></div>
+            </header>
+            
+            <section class="hitech-card">
+                
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="profile-photo-section stagger-1">
+                        <div class="radar-dp-box">
+                            <div class="radar-sweep"></div>
+                            <span>NO DP</span>
+                        </div>
+                        <div class="upload-btn-wrapper">
+                            <label for="profilePhoto">INITIALIZE UPLOAD</label>
+                            <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        
+                        <div class="input-group stagger-2">
+                            <label for="fullName">OPERATIVE NAME</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required>
+                        </div>
+
+                        <div class="input-group stagger-3">
+                            <label for="username">SYS USERNAME</label>
+                            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                        </div>
+
+                        <div class="input-group stagger-4">
+                            <label for="email">SECURE COMM (EMAIL)</label>
+                            <input type="email" id="email" name="email" placeholder="admin@command.net" required>
+                        </div>
+
+                        <div class="input-group stagger-5">
+                            <label for="mobile">LINKED DEVICE (MOBILE)</label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="+91 xxxxxxxxxx" required>
+                        </div>
+
+                        <div class="input-group stagger-6">
+                            <label for="empId">AUTHORIZATION ID</label>
+                            <input type="text" id="empId" name="empId" placeholder="e.g. CMD-001">
+                        </div>
+
+                        <div class="input-group stagger-7">
+                            <label for="password">ENCRYPTION KEY (PASSWORD)</label>
+                            <input type="password" id="password" name="password" placeholder="Enter new password">
+                        </div>
+
+                    </div>
+
+                    <div class="submit-section stagger-8">
+                        <button type="submit" class="cyber-btn">EXECUTE OVERRIDE</button>
+                    </div>
+
+                </form>
+
+            </section>
+        </main>
+
+    </div>
+
+</body>
+</html>
