@@ -1,14 +1,16 @@
 from flask import Flask, render_template
-import os
 
 app = Flask(__name__)
 
+# Route 1: For the Main Homepage (आपका पुराना पेज)
 @app.route('/')
 def home():
     return render_template('index.html')
 
+# Route 2: NEW Route for the Admin Panel
+@app.route('/admin')
+def admin_panel():
+    return render_template('admin.html')
+
 if __name__ == '__main__':
-    # Render takes port from environment variable
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
-  
+    app.run(debug=True)
