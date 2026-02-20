@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Panel - Commander</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin-style.css') }}">
+</head>
+<body>
+
+    <div class="admin-container">
+        
+        <aside class="sidebar">
+            <h2>Admin Menu</h2>
+            <ul>
+                <li><a href="/">Go to Homepage</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header class="content-header">
+                <h1>Welcome back to the Command Center!</h1>
+            </header>
+            
+            <section class="dashboard-cards">
+                <div class="card">Total Users: 150</div>
+                <div class="card">Active Missions: 5</div>
+                <div class="card">System Status: Online</div>
+            </section>
+        </main>
+
+    </div>
+
+</body>
+</html>
